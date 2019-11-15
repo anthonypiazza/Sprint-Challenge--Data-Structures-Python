@@ -63,34 +63,3 @@ class BinarySearchTree:
             # print(self.value)
         return
                 
-
-
-    def bft_print(self, node):
-        queue = Queue()
-       
-        queue.enqueue(node)
-
-        while queue.storage.length > 0:
-            node = queue.dequeue()
-            if node.left is not None:
-                queue.enqueue(node.left)
-            if node.right is not None:
-                queue.enqueue(node.right)
-            print(node.value)
-
-
-
-    def dft_print(self, node):
-
-        stack = Stack()
-
-        stack.push(node)
-        
-        while stack.len() > 0:
-            node = stack.pop()
-
-            if node.left is not None:
-                stack.push(node.left)
-            if node.right is not None:
-                stack.push(node.right)
-            print(node.value)
